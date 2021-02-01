@@ -1,0 +1,945 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap'); 
+
+/* Общие параметры страницы */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Oswald;
+    scroll-behavior: smooth;
+}
+
+p {
+    font-weight: 300;
+}
+
+h3 {
+    color: #006293;
+    font-size: 2em;
+    font-weight: 300;
+}
+
+h4 {
+    color: #006293;
+    font-size: 1em;
+    font-weight: 300;
+}
+
+section {
+    padding: 100px;
+}
+
+/* Header */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    z-index: 1055;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+
+header .logo {
+    display: flex;
+    min-width: 140px;
+    min-height: 53px;
+    background-image: url(/assets/logo.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+header .navigation {
+    position: relative;
+    display: flex;
+}
+
+header .navigation li {
+    list-style: none;
+    margin-left: 30px;
+}
+
+header .navigation li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 300;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+    letter-spacing: 1px;
+    display: inline-block;
+}
+
+header .navigation li a::after {
+    transition: 0.5s;
+    content: '';
+    width: 0px;
+    height: 2px;
+    display: block;
+    background: #ffffff;
+}
+
+header .navigation li a:hover::after{
+    width: 100%;
+}
+
+.ru {
+    margin-left: 5px;
+    width: 14px;
+    height: 14px;
+}
+
+.en {
+    margin-left: 5px;
+    width: 14px;
+    height: 14px; 
+}
+
+/* Header при скроле "sticky" */
+
+.sticky {
+    background: #ffffff;
+    padding: 20px 100px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.sticky .logo {
+    background-image: url(/assets/logo2.png);
+}
+
+.sticky .navigation li a {
+    color: #006293;
+    text-shadow: none;
+}
+
+.sticky .navigation li a::after {
+    background: #006293;
+    height: 2.5px;
+}
+
+/* Header Burger Menu при медиа запросе*/
+
+.line {
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+    transition: all 0.75s;
+}
+
+.change .line-1 {
+    transform: rotateZ(-405deg) translate(-8px, 6px);
+}
+
+.change .line-2 {
+    opacity: 0;
+}
+
+.change .line-3 {
+    transform: rotateZ(405deg) translate(-8px, -6px);
+}
+
+.sticky .line {
+    width: 100%;
+    height: 3px;
+    background-color: #006293;
+}
+
+.change .line {
+    background-color: #006293;
+}
+
+.navbar {
+    z-index: 1000;
+    width: 300px;
+    height: 100%;
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.8s;
+    box-shadow: -10px 0 20px rgba(0, 0, 0, 0.075);
+}
+
+.change {
+    right: 0; 
+}
+
+.navwrap {
+	background: rgba(0, 0, 0, 0);
+	position: absolute;
+	z-index: 1050;
+}
+
+.v-change {
+	background: rgba(0, 0, 0, 0.7);
+	width: 100%;
+	height: 10000%;
+}
+
+.body-no-of {
+	overflow: hidden;
+}
+
+.navList {
+    text-align: center;
+}
+
+.navItem {
+    list-style: none;
+    margin: 10px;
+}
+
+.navLink {
+    text-decoration: none;
+    color:  #006293;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.navLink::after {
+    transition: 0.5s;
+    content: '';
+    width: 0px;
+    height: 2px;
+    display: block;
+    background: #006293;
+}
+
+.navLink:hover::after{
+    width: 100%;
+}
+
+/* Баннер main */
+
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/assets/bg.jpg);
+    background-size: cover;
+}
+
+.banner .content {
+    max-width: 900px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 5em;
+    color: #ffffff;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+
+.banner .content p  {
+    color: #ffffff;
+    letter-spacing: 1.5px;
+    text-shadow: 1px 2px 1.5px rgba(0,0,0,0.3);
+}
+
+.btn {
+    font-size: 1em;
+    color: #ffffff;
+    background: #006293;
+    display: inline-block;
+    padding: 10px 30px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.5s;
+    letter-spacing: 1.5px;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+}
+
+.btn:hover {
+    background: #1e4c63;
+    text-decoration: underline;
+    transition: 0.75s;
+}
+
+/* Секция о роде деятельности КДЦ "occupation" */
+
+.title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.occupation .content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.occupation .content .box {
+    width: 200px;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.occupation .content .box .imgBx1 {
+    background-image: url(/assets/coordination2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height: 200px;
+}
+
+.occupation .content .box .imgBx2 {
+    background-image: url(/assets/participation2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height: 200px;
+}
+
+.occupation .content .box .imgBx3 {
+    background-image: url(/assets/providing2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height: 200px;
+}
+
+.occupation .content .box .text {
+    padding: 15px 0 5px;
+    text-align: center;
+}
+
+/* Секция о КДЦ "about" */
+
+.about {
+    background-color: #f6f6f6;
+}
+
+.about .content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.about .content .text {
+    min-width: 250px; 
+    min-height: 100px;
+    max-width: 600px;
+    margin-left: 15px;
+    margin-right: 15px;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.about .content .photo {
+    display: flex;
+    margin-left: 15px;
+    margin-right: 15px;
+    max-width: 600px;
+    min-width: 250px;
+}
+
+.about .content .photo img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.about .content .btn {
+    margin-left: 300px;
+    margin-right: 300px;
+}
+
+/* Секция о челенах совета (КЭС) КДЦ "shareholders" */
+
+.shareholders .content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.shareholders .content a {
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.shareholders  .content .box {
+    width: 200px;
+    margin: 20px;
+}
+
+.shareholders .content .box .imgBxKz {
+    height: 200px;
+    width: 100%;
+    background-image: url(/assets/eskz.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transition: 0.75s;
+}
+
+.shareholders .content .box .imgBxUz {
+    height: 200px;
+    width: 100%;
+    background-image: url(/assets/esuz.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    transition: 0.75s;
+}
+
+.shareholders .content .box .imgBxKg {
+    height: 200px;
+    width: 100%;
+    background-image: url(/assets/eskg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 90%;
+    transition: 0.75s;
+}
+
+.shareholders .content .box .imgBxTj {
+    height: 200px;
+    width: 100%;
+    background-image: url(/assets/estj.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    transition: 0.75s;
+}
+
+.action .content .box .text {
+    padding: 15px 0 5px;
+}
+
+/* Секция о руководителях КДЦ "managers" */
+
+.managers {
+    background-color: #f6f6f6;
+}
+
+.nameManager {
+    color: #000000;
+    font-size: 1.1em;
+    font-weight: 300;
+}
+
+.managers .content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.managers .content .box {
+    min-width: 250px;
+    margin: 20px;
+}
+
+.managers .content .box .imgBx {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.managers .content .box .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.managers .content .box .text {
+    padding: 15px 0 5px;
+}
+
+/* Секция c контактами КДЦ "contact" */
+
+.contact {
+    background: no-repeat url(/assets/bg2.png);
+    background-position: top right;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.contact .title {
+    margin-bottom: 25px;
+}
+
+.QRBox {
+    padding: 40px 30px;
+    background: #ffffff;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    min-width: 300px;
+    min-height: 400px;
+    margin: 10px;
+}
+
+.QRBox h4 {
+    text-align: center;
+    color:#006293;
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+.QRCode {
+    justify-content: center;
+}
+
+.QRCode img {
+    width: 100%;
+    height: 100%;
+}
+
+.contactBox {
+    padding: 40px 30px;
+    background: #ffffff;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    min-width: 300px;
+    min-height: 400px;
+    margin: 10px;
+}
+
+.telEMailAddress {
+    margin-bottom: 10px;
+}
+
+.contactBox h4 {
+    color:#006293;
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+.contactBox a {
+    text-decoration: none;
+    color: #111111;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.contactBox a:hover {
+    text-decoration: underline;
+}
+
+/* Секция локации на карте КДЦ "managers" */
+
+.location {
+    background-color: #f6f6f6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.map {
+    display: flex;
+    max-width: 800px;
+    margin: 50px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+}
+
+/* Секция Авторского права "copyrightText" */
+
+.copyrightText {
+    padding: 8px 40px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.copyrightText p {
+   color: #333333;
+}
+
+.copyrightText a {
+   color: #006293;
+   font-weight: 500;
+   text-decoration: none;
+}
+
+/* Медиа запросы на все секции */
+
+@media (max-width: 850px) {
+
+    h2 {
+        font-size: 3em;
+    }
+
+    p {
+        font-weight: 300;
+        font-size: 0.8em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    .btn {
+        font-size: 0.75em;
+        padding: 10px 20px;
+        margin-top: 15px;
+        letter-spacing: 1px;
+    }
+
+    .contact {
+        background: none;
+    }
+
+    .map {
+        width: 85%;
+        margin: 0;
+    }
+
+    .structure .content {
+        margin: 0px;
+    }
+    .structure .content img {
+        margin-left: 0px;
+        margin-right: 0px;
+        width: 100%;
+        height: 100%;
+    }
+
+
+}
+
+@media (max-width: 1050px) {
+    header .navigation {
+        display: none;
+    }
+
+    .burgerMenu {
+        width: 35px;
+        height: 30px;  
+				top: 30px;
+        margin-right: 30px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+}
+
+@media (min-width: 1050px) {
+    .navbar {
+        right: -300px;
+    }
+}
+
+@media (max-width: 550px) {
+    .location {
+        display: none;
+    }
+
+    .locationItem {
+        display: none;
+    }
+}
+
+@media (max-width: 450px) {
+    header {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    section {
+        padding: 30px;
+    }
+
+    .shareholders  .content .box {
+        margin: 0;
+    }
+
+    .burgerMenu {
+        margin-right: 0;
+        flex-direction: column;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    h3 {
+        font-size: 1.3em;
+    }
+
+    .occupation .content .box {
+        margin-right: 0;
+        margin-left: 0;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .messageBox h4 {
+        font-size: 1em;
+        margin-bottom: 15px;
+        font-weight: 300; 
+    }
+
+    .messageBox .inputBox input[type="submit"] {
+        font-size: 0.8em;
+        letter-spacing: 1px;
+    }
+
+    .shareholders .content a:hover {
+        transition: none;
+    }
+
+}
+
+@media (min-width: 450px) {
+
+    .shareholders .content a:hover {
+        text-decoration: underline;
+        color: #006293;
+        box-shadow: 0 5px 35px rgba(0, 0, 0, 0.07);
+        transition: 0.5s;
+    }
+
+    .shareholders .content a:hover .imgBxKz {
+        background-image: url(/assets/eskz2.png);
+        transition: 0.75s;
+    }
+
+    .shareholders .content a:hover .imgBxUz {
+        background-image: url(/assets/esuz2.jpg);
+        transition: 0.75s;
+    }
+
+    .shareholders .content a:hover .imgBxKg {
+        background-image: url(/assets/eskg2.png);
+        transition: 0.75s;
+    }
+
+    .shareholders .content a:hover .imgBxTj {
+        background-image: url(/assets/estj2.png);
+        transition: 0.75s;
+    }
+
+}
+
+/* Для подробной страницы о нас */
+
+/* Секция Устав КДЦ "institution" */
+
+.institution {
+    margin-top: 60px;
+    background-color: #f6f6f6;
+    justify-content: center;
+}
+
+.institution .content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.institution .content .text {
+    min-width: 250px; 
+    min-height: 100px;
+    max-width: 590px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.institution .content .photo {
+    display: flex;
+    margin-left: 10px;
+    margin-right: 10px;
+    max-width: 600px;
+    min-width: 250px;
+}
+
+ .content .photo img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.institution .content .photo .imgBx h4 {
+    text-align: right;
+}
+
+
+/* Секция Структура диспетчерского управления "structure" */
+
+.structure .content {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
+
+.structure .content img {
+    margin-left: 50px;
+    margin-right: 50px;
+    width: 80%;
+    height: 80%;
+}
+
+/* Основные направления деятельность "activities" */
+
+.activities {
+    background-color: #f6f6f6;
+}
+
+.activities h3 {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.activities .content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.activities .content .text {
+    min-width: 250px; 
+    min-height: 100px;
+    max-width: 600px;
+    margin-left: 15px;
+    margin-right: 15px;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.activities .content .photo {
+    display: flex;
+    margin-left: 15px;
+    margin-right: 15px;
+    max-width: 600px;
+    min-width: 250px;
+}
+
+.activities .content .photo img {
+    object-fit: cover;
+    width: 90%;
+    height: 95%;
+}
+
+/* Секция Структура КДЦ "structure" */
+
+.structureCDC .content {
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
+
+.structureCDC .content img {
+    max-width: 50%;
+    max-height: 50%;
+}
+
+/* Секция Администрация КДЦ "administration" */
+
+.administration .title h3 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.administration .text h3 {
+    text-align: left;
+}
+
+/* Для секций  служб (белый фон и фото справа) "serviceWhiteBackground" */
+
+.serviceWhiteBackground {
+    background: none;
+    margin-top: 60px;
+}
+
+.serviceWhiteBackground .content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.serviceWhiteBackground .content .text {
+    min-width: 250px; 
+    min-height: 100px;
+    max-width: 650px;
+    margin-left: 15px;
+    margin-right: 15px;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.serviceWhiteBackground .content .photo {
+    display: flex;
+    margin-left: 35px;
+    margin-right: 35px;
+    max-width: 500px;
+    max-height: 550px;
+}
+
+.serviceWhiteBackground .content .photo img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.serviceWhiteBackground .content .photo h4 {
+    text-align: center;
+}
+
+.greyBackground {
+    background-color: #f6f6f6;
+}
+
+@media (max-width: 1451px) {
+.greyBackground .content .photo {
+    order: 2;
+}
+
+.greyBackground .content .text {
+    order: 1;
+}
+
+.institution .content .photo {
+    order: 2;
+}
+
+.institution .content .text {
+    order: 1;
+}
+
+.activities .content .photo {
+    order: 2;
+}
+
+.activities .content .text {
+    order: 1;
+}
+}
+
