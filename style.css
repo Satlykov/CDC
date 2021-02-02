@@ -49,7 +49,7 @@ header .logo {
     display: flex;
     min-width: 140px;
     min-height: 53px;
-    background-image: url(/assets/logo.png);
+    background-image: url(assets/logo.png);
     background-size: 80%;
     background-repeat: no-repeat;
     background-position: center;
@@ -108,7 +108,7 @@ header .navigation li a:hover::after{
 }
 
 .sticky .logo {
-    background-image: url(/assets/logo2.png);
+    background-image: url(assets/logo2.png);
 }
 
 .sticky .navigation li a {
@@ -225,7 +225,7 @@ header .navigation li a:hover::after{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(/assets/bg.jpg);
+    background-image: url(assets/bg.jpg);
     background-size: cover;
 }
 
@@ -293,7 +293,7 @@ h2 {
 }
 
 .occupation .content .box .imgBx1 {
-    background-image: url(/assets/coordination2.png);
+    background-image: url(assets/coordination2.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -302,7 +302,7 @@ h2 {
 }
 
 .occupation .content .box .imgBx2 {
-    background-image: url(/assets/participation2.png);
+    background-image: url(assets/participation2.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -311,7 +311,7 @@ h2 {
 }
 
 .occupation .content .box .imgBx3 {
-    background-image: url(/assets/providing2.png);
+    background-image: url(assets/providing2.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -390,7 +390,7 @@ h2 {
 .shareholders .content .box .imgBxKz {
     height: 200px;
     width: 100%;
-    background-image: url(/assets/eskz.png);
+    background-image: url(assets/eskz.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -400,7 +400,7 @@ h2 {
 .shareholders .content .box .imgBxUz {
     height: 200px;
     width: 100%;
-    background-image: url(/assets/esuz.jpg);
+    background-image: url(assets/esuz.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 80%;
@@ -410,7 +410,7 @@ h2 {
 .shareholders .content .box .imgBxKg {
     height: 200px;
     width: 100%;
-    background-image: url(/assets/eskg.png);
+    background-image: url(assets/eskg.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 90%;
@@ -420,7 +420,7 @@ h2 {
 .shareholders .content .box .imgBxTj {
     height: 200px;
     width: 100%;
-    background-image: url(/assets/estj.png);
+    background-image: url(assets/estj.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 80%;
@@ -479,7 +479,7 @@ h2 {
 /* Секция c контактами КДЦ "contact" */
 
 .contact {
-    background: no-repeat url(/assets/bg2.png);
+    background: no-repeat url(assets/bg2.png);
     background-position: top right;
     display: flex;
     justify-content: center;
@@ -723,22 +723,22 @@ h2 {
     }
 
     .shareholders .content a:hover .imgBxKz {
-        background-image: url(/assets/eskz2.png);
+        background-image: url(assets/eskz2.png);
         transition: 0.75s;
     }
 
     .shareholders .content a:hover .imgBxUz {
-        background-image: url(/assets/esuz2.jpg);
+        background-image: url(assets/esuz2.jpg);
         transition: 0.75s;
     }
 
     .shareholders .content a:hover .imgBxKg {
-        background-image: url(/assets/eskg2.png);
+        background-image: url(assets/eskg2.png);
         transition: 0.75s;
     }
 
     .shareholders .content a:hover .imgBxTj {
-        background-image: url(/assets/estj2.png);
+        background-image: url(assets/estj2.png);
         transition: 0.75s;
     }
 
