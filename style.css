@@ -747,22 +747,22 @@ h2 {
 
 /* Для подробной страницы о нас */
 
-/* Секция Устав КДЦ "institution" */
+/* Секция Устав КДЦ "establishment" */
 
-.institution {
+.establishment {
     margin-top: 60px;
     background-color: #f6f6f6;
     justify-content: center;
 }
 
-.institution .content {
+.establishment .content {
     display: flex;
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
-.institution .content .text {
+.establishment .content .text {
     min-width: 250px; 
     min-height: 100px;
     max-width: 590px;
@@ -772,7 +772,7 @@ h2 {
     margin-bottom: 20px;
 }
 
-.institution .content .photo {
+.establishment .content .photo {
     display: flex;
     margin-left: 10px;
     margin-right: 10px;
@@ -786,7 +786,7 @@ h2 {
     height: 100%;
 }
 
-.institution .content .photo .imgBx h4 {
+.establishment .content .photo .imgBx h4 {
     text-align: right;
 }
 
@@ -927,11 +927,11 @@ h2 {
     order: 1;
 }
 
-.institution .content .photo {
+.establishment .content .photo {
     order: 2;
 }
 
-.institution .content .text {
+.establishment .content .text {
     order: 1;
 }
 
