@@ -8,6 +8,7 @@
     box-sizing: border-box;
     font-family: Oswald;
     scroll-behavior: smooth;
+    line-height: 1.6;
 }
 
 p {
