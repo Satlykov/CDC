@@ -665,6 +665,10 @@ h2 {
 }
 
 @media (max-width: 450px) {
+    .establishment .content {
+        margin-top: 50px;
+    }
+    
     header {
         justify-content: center;
         flex-direction: column;
