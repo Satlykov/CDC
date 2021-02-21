@@ -803,8 +803,8 @@ h2 {
 .structure .content img {
     margin-left: 50px;
     margin-right: 50px;
-    width: 80%;
-    height: 80%;
+    max-width: 80%;
+    max-height: 80%;
 }
 
 /* Основные направления деятельность "activities" */
@@ -845,8 +845,6 @@ h2 {
 
 .activities .content .photo img {
     object-fit: cover;
-    width: 90%;
-    height: 95%;
 }
 
 /* Секция Структура КДЦ "structure" */
@@ -945,3 +943,20 @@ h2 {
 }
 }
 
+@media (max-width: 850px) { 
+    .structure .content img {
+        margin-left: 0;
+        margin-right: 0;
+        max-width: none;
+        max-height: none;
+    }
+
+    .structureCDC .content img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .caption {
+        display: none;
+    }
+}
