@@ -713,6 +713,10 @@ h2 {
         transition: none;
     }
 
+    .greyBackground .content {
+        margin-bottom: 80px;
+    }
+
 }
 
 @media (min-width: 450px) {
@@ -954,6 +958,8 @@ h2 {
     .structureCDC .content img {
         max-width: 100%;
         max-height: 100%;
+        margin-left: 0;
+        margin-right: 0;
     }
 
     .caption {
