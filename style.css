@@ -665,6 +665,7 @@ h2 {
 }
 
 @media (max-width: 450px) {
+    
     .establishment .content {
         margin-top: 50px;
     }
