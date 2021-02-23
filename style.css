@@ -372,7 +372,7 @@ h2 {
 .shareholders .content {
     display: flex;
     justify-content: center;
-    flex-direction: row-reverse;
+    flex-direction: row;
     flex-wrap: wrap;
     margin-top: 20px;
     text-align: center;
